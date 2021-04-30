@@ -1,5 +1,5 @@
-export const value = 'shared value';
 import * as $ from 'jquery';
+export const value = 'shared value';
 
 export function html(selector: string, html: string) {
     setTimeout(() => {

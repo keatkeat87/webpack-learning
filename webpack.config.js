@@ -1,6 +1,6 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -11,10 +11,13 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].bundle.js',
+        filename: '[name].bundle.js'
     },
     plugins: [
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new ESLintPlugin({
+            extensions: ['js', 'ts']
+        })
     ],
     module: {
         rules: [
@@ -26,8 +29,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js' ]
+        extensions: ['.ts', '.js']
     },
-    devtool: 'inline-source-map',
-}
-
+    devtool: 'inline-source-map'
+};
