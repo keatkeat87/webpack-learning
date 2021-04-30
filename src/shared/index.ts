@@ -1,7 +1,7 @@
 export const value = 'shared value';
-import $ from "jquery";
+import * as $ from 'jquery';
 
-export function html(selector, html) {
+export function html(selector: string, html: string) {
     setTimeout(() => {
         $(selector).html(html);
     }, 3000);
