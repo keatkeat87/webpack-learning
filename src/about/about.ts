@@ -1,3 +1,4 @@
+import './about.css';
 import {
     value,
     html
