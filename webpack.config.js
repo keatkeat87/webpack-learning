@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs');
+// const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -54,18 +54,18 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js'] // 默认只有 js
+        extensions: ['.ts', '.js']
     },
     devtool: 'inline-source-map',
     devServer: {
         openPage: 'home.html',
         open: true,
-        contentBase: './dist',
-        host: '192.168.1.152',
-        port: 4200,
-        https: {
-            key: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.key'),
-            cert: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.crt')
-        }
+        contentBase: './dist'
+        // host: '192.168.1.152',
+        // port: 4200,
+        // https: {
+        //     key: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.key'),
+        //     cert: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.crt')
+        // }
     }
 };

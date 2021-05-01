@@ -1,5 +1,10 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 .dada {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: red;
     width: 200px;
     height: 200px;
