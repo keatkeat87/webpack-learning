@@ -1,3 +1,4 @@
+import './home.scss';
 import { value, html } from '../shared/index';
 
 const a = 5;

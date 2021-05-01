@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -6,9 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        home: './src/home/index',
-        about: './src/about/index',
-        contact: './src/contact/index'
+        home: './src/home/home',
+        about: './src/about/about',
+        contact: './src/contact/contact'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -22,19 +23,19 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'home',
             filename: 'home.html',
-            template: './src/home/template.html',
+            template: './src/home/home.html',
             chunks: ['home']
         }),
         new HtmlWebpackPlugin({
             title: 'about',
             filename: 'about.html',
-            template: './src/about/template.html',
+            template: './src/about/about.html',
             chunks: ['about']
         }),
         new HtmlWebpackPlugin({
             title: 'contact',
             filename: 'contact.html',
-            template: './src/contact/template.html',
+            template: './src/contact/contact.html',
             chunks: ['contact']
         })
     ],
@@ -44,6 +45,11 @@ module.exports = {
                 test: /\.ts$/,
                 use: 'ts-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+                exclude: /node_modules/
             }
         ]
     },
@@ -52,6 +58,12 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        host: '192.168.1.152',
+        port: 4200,
+        https: {
+            key: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.key'),
+            cert: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.crt')
+        }
     }
 };
