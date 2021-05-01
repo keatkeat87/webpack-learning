@@ -1,8 +1,5 @@
 import './about.css';
-import {
-    value,
-    html
-} from '../shared/index';
+import { value, html } from '../shared/index';
 
 console.log('contact page', value);
 html('#target', 'about page');
