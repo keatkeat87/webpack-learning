@@ -1,6 +1,6 @@
 {
   "name": "webpack",
-  "version": "1",
+  "version": "1.0.0",
   "scripts": {
     "build": "webpack",
     "start": "webpack serve"
@@ -12,6 +12,7 @@
     "@types/jquery": "^3.5.5",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
+    "autoprefixer": "^10.2.5",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.4",
     "eslint": "7.12.1",
@@ -23,6 +24,7 @@
     "html-webpack-plugin": "^5.3.1",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.13",
+    "postcss-font-magician": "^3.0.0",
     "postcss-import": "^14.0.1",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",
