@@ -3,7 +3,7 @@
   "version": "1",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve"
   },
   "main": "index.js",
   "author": "derrick",

@@ -58,6 +58,8 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     devServer: {
+        openPage: 'home.html',
+        open: true,
         contentBase: './dist',
         host: '192.168.1.152',
         port: 4200,
