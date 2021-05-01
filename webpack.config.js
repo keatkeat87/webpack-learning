@@ -29,7 +29,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js'] // 默认只有 js
     },
     devtool: 'inline-source-map'
 };
