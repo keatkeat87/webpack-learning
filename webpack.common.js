@@ -1,11 +1,9 @@
 const path = require('path');
-const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: {
         home: './src/home/home',
         about: './src/about/about',
@@ -50,10 +48,6 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             },
-            // {
-            //     test: /\.css$/,
-            //     use: ['style-loader', 'css-loader']
-            // },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
@@ -66,17 +60,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.js']
-    },
-    devtool: 'inline-source-map',
-    devServer: {
-        openPage: 'home.html',
-        open: true,
-        contentBase: './dist',
-        host: '192.168.1.152',
-        port: 4200,
-        https: {
-            key: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.key'),
-            cert: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.crt')
-        }
     }
 };
