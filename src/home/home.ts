@@ -10,8 +10,8 @@ console.log('contact page', value);
 html('#target', 'home page');
 
 const swiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
-    loop: true,
+    // direction: 'vertical',
+    // loop: true,
 
     pagination: {
         el: '.swiper-pagination'
@@ -20,11 +20,11 @@ const swiper = new Swiper('.swiper-container', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
-    },
-
-    scrollbar: {
-        el: '.swiper-scrollbar'
     }
+
+    // scrollbar: {
+    //     el: '.swiper-scrollbar'
+    // }
 });
 console.log(swiper);
 
