@@ -20,11 +20,3 @@
  * your stylesheet by default.
  */
 @tailwind screens;
-
-.btn {
-    @apply font-boold py-2 px-4 rounded;
-}
-
-.btn-blue {
-    @apply bg-blue-500 hover: bg-blue-700 text-white;
-}
