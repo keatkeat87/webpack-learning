@@ -17,6 +17,7 @@
     "rules": {
         "semi": ["error", "always"],
         "space-before-function-paren": "off",
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "no-multiple-empty-lines": "off"
     }
 }
