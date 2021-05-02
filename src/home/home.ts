@@ -1,10 +1,10 @@
 import './home.scss';
 import { value, html } from '../shared/index';
 
-import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
+import SwiperCore, { Navigation, Pagination, Swiper, Zoom } from 'swiper/core';
 import 'swiper/swiper-bundle.css';
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Zoom]);
 
 console.log('contact page', value);
 html('#target', 'home page');
@@ -12,9 +12,11 @@ html('#target', 'home page');
 const swiper = new Swiper('.swiper-container', {
     // direction: 'vertical',
     // loop: true,
+    zoom: true,
 
     pagination: {
-        el: '.swiper-pagination'
+        el: '.swiper-pagination',
+        clickable: true
     },
 
     navigation: {
