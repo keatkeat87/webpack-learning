@@ -76,39 +76,43 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js']
     },
-    // ...(isProduction ? {} : undefined)
-    optimization: {
-        moduleIds: 'deterministic',
-        runtimeChunk: 'single',
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                terserOptions: {
-                    format: {
-                        comments: false
-                    }
-                },
-                extractComments: false
-            }),
-            ...(isProduction ? [new CssMinimizerPlugin()] : [])
-        ],
-        splitChunks: {
-            chunks: 'all',
-            cacheGroups: {
-                commons: {
-                    name: 'commons',
+    ...(isProduction
+        ? {
+            optimization: {
+                moduleIds: 'deterministic',
+                runtimeChunk: 'single',
+                minimize: true,
+                minimizer: [
+                    new TerserPlugin({
+                        terserOptions: {
+                            format: {
+                                comments: false
+                            }
+                        },
+                        extractComments: false
+                    }),
+                    ...(isProduction ? [new CssMinimizerPlugin()] : [])
+                ],
+                splitChunks: {
                     chunks: 'all',
-                    minChunks: 2,
-                    minSize: 1
-                },
-                vendors: {
-                    name: 'vendors',
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: 'all'
+                    cacheGroups: {
+                        commons: {
+                            name: 'commons',
+                            chunks: 'all',
+                            minChunks: 2,
+                            minSize: 1
+                        },
+                        vendors: {
+                            name: 'vendors',
+                            test: /[\\/]node_modules[\\/]/,
+                            chunks: 'all'
+                        }
+                    }
                 }
             }
         }
-    }
+        : undefined
+    )
 };
 
 
