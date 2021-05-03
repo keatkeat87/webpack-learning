@@ -1,8 +1,6 @@
-import * as $ from 'jquery';
 export const value = 'shared value';
 
-export function html(selector: string, html: string) {
+export function html(_selector: string, _html: string) {
     setTimeout(() => {
-        $(selector).html(html);
     }, 3000);
 }

@@ -1,11 +1,11 @@
 import './home.scss';
 import * as $ from 'jquery';
-
+import { value } from '../shared/index';
 import SwiperCore, { Navigation, Pagination, Swiper, Zoom } from 'swiper/core';
 import 'swiper/swiper-bundle.css';
 SwiperCore.use([Navigation, Pagination, Zoom]);
 
-console.log([$, Swiper]);
+console.log([$, Swiper, value]);
 // const swiper = new Swiper('.swiper-container', {
 //     direction: 'vertical',
 //     loop: true,

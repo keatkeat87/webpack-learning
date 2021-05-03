@@ -2,6 +2,8 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
 
 module.exports = {
     entry: {
@@ -11,7 +13,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].[contenthash].js'
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -62,21 +64,36 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
     optimization: {
-        splitChunks: {
-            cacheGroups: {
-                swiper: {
-                    test: /[\\/]node_modules[\\/]swiper[\\/]/,
-                    name: 'swiper',
-                    chunks: chunk => chunk.name !== 'home' && chunk.name !== 'landing-page',
-                    priority: 1
+        moduleIds: 'deterministic',
+        runtimeChunk: 'single',
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    format: {
+                        comments: false
+                    }
                 },
-                jquery: {
-                    test: /[\\/]node_modules[\\/]jquery[\\/]/,
-                    name: 'jquery',
-                    chunks: chunk => chunk.name !== 'home' && chunk.name !== 'landing-page',
-                    priority: 1
+                extractComments: false
+            })
+        ],
+        splitChunks: {
+            chunks: 'all',
+            cacheGroups: {
+                commons: {
+                    name: 'commons',
+                    chunks: 'all',
+                    minChunks: 2
+                },
+                vendors: {
+                    name: 'vendors',
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'all'
                 }
             }
         }
     }
 };
+
+
+

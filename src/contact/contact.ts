@@ -1,10 +1,10 @@
 import './contact.scss';
 import * as $ from 'jquery';
-
+import { value } from '../shared/index';
 import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
 import 'swiper/swiper-bundle.css';
 SwiperCore.use([Navigation, Pagination]);
-console.log([$, Swiper]);
+console.log([$, Swiper, value]);
 
 
 

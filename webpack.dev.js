@@ -14,6 +14,7 @@ module.exports = merge(common, {
         https: {
             key: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.key'),
             cert: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.crt')
-        }
+        },
+        hot: true
     }
 });
