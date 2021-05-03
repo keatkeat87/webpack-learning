@@ -1,16 +1,21 @@
+
+
 import './home.scss';
-import * as $ from 'jquery';
-import { value } from '../shared/index';
-import SwiperCore, { Navigation, Pagination, Swiper, Zoom } from 'swiper/core';
-import 'swiper/swiper-bundle.css';
-SwiperCore.use([Navigation, Pagination, Zoom]);
+// import mainImage from '../assets/images/yangmi.jpg';
+// console.log('mainImage', mainImage);
 
-console.log([$, Swiper, value]);
+// import * as $ from 'jquery';
+// import { value } from '../shared/index';
+// import SwiperCore, { Navigation, Pagination, Swiper, Zoom } from 'swiper/core';
+// import 'swiper/swiper-bundle.css';
+// SwiperCore.use([Navigation, Pagination, Zoom]);
+
+// console.log([$, Swiper, value]);
 
 
-if (process.env.NODE_ENV !== 'production') {
-    console.log('Looks like we are in development mode!');
-}
+// if (process.env.NODE_ENV !== 'production') {
+//     console.log('Looks like we are in development mode!');
+// }
 
 // const swiper = new Swiper('.swiper-container', {
 //     direction: 'vertical',
