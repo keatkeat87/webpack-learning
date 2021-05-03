@@ -15,7 +15,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].[contenthash].js'
+        filename: isProduction ? '[name].[contenthash].js' : '[name].js'
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -76,6 +76,7 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js']
     },
+    // ...(isProduction ? {} : undefined)
     optimization: {
         moduleIds: 'deterministic',
         runtimeChunk: 'single',
