@@ -21,3 +21,5 @@ console.log([$, Swiper, value]);
 
 
 console.log('contact page');
+
+document.getElementById('dada')?.classList.add('text-gray-600');
