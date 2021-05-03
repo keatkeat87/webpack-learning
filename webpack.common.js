@@ -9,9 +9,9 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     entry: {
-        home: './src/home/home',
-        about: './src/about/about',
-        contact: './src/contact/contact'
+        home: './src/home/home'
+        // about: './src/about/about',
+        // contact: './src/contact/contact'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -35,19 +35,19 @@ module.exports = {
             filename: 'home.html',
             template: './src/home/home.html',
             chunks: ['home']
-        }),
-        new HtmlWebpackPlugin({
-            title: 'about',
-            filename: 'about.html',
-            template: './src/about/about.html',
-            chunks: ['about']
-        }),
-        new HtmlWebpackPlugin({
-            title: 'contact',
-            filename: 'contact.html',
-            template: './src/contact/contact.html',
-            chunks: ['contact']
         })
+        // new HtmlWebpackPlugin({
+        //     title: 'about',
+        //     filename: 'about.html',
+        //     template: './src/about/about.html',
+        //     chunks: ['about']
+        // }),
+        // new HtmlWebpackPlugin({
+        //     title: 'contact',
+        //     filename: 'contact.html',
+        //     template: './src/contact/contact.html',
+        //     chunks: ['contact']
+        // })
     ],
     module: {
         rules: [

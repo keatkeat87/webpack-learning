@@ -1,0 +1,113 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?64e019f04ce4566dcc0c2972bab634c3") format("truetype"),
+url("./flaticon.woff?64e019f04ce4566dcc0c2972bab634c3") format("woff"),
+url("./flaticon.woff2?64e019f04ce4566dcc0c2972bab634c3") format("woff2"),
+url("./flaticon.eot?64e019f04ce4566dcc0c2972bab634c3#iefix") format("embedded-opentype"),
+url("./flaticon.svg?64e019f04ce4566dcc0c2972bab634c3#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "whatsapp": "\f101",
+    "call": "\f102",
+    "placeholder": "\f103",
+    "arrowhead-pointing-to-the-right": "\f104",
+    "next": "\f105",
+    "back": "\f106",
+    "done": "\f107",
+    "check-mark": "\f108",
+    "add": "\f109",
+    "minus": "\f10a",
+    "close": "\f10b",
+    "information": "\f10c",
+    "info": "\f10d",
+    "down-arrow": "\f10e",
+    "pin": "\f10f",
+    "more": "\f110",
+    "more-1": "\f111",
+    "share": "\f112",
+    "share-1": "\f113",
+    "menu": "\f114",
+    "x-mark": "\f115",
+    "garbage": "\f116",
+);
+
+.flaticon-whatsapp:before {
+    content: map-get($flaticon-map, "whatsapp");
+}
+.flaticon-call:before {
+    content: map-get($flaticon-map, "call");
+}
+.flaticon-placeholder:before {
+    content: map-get($flaticon-map, "placeholder");
+}
+.flaticon-arrowhead-pointing-to-the-right:before {
+    content: map-get($flaticon-map, "arrowhead-pointing-to-the-right");
+}
+.flaticon-next:before {
+    content: map-get($flaticon-map, "next");
+}
+.flaticon-back:before {
+    content: map-get($flaticon-map, "back");
+}
+.flaticon-done:before {
+    content: map-get($flaticon-map, "done");
+}
+.flaticon-check-mark:before {
+    content: map-get($flaticon-map, "check-mark");
+}
+.flaticon-add:before {
+    content: map-get($flaticon-map, "add");
+}
+.flaticon-minus:before {
+    content: map-get($flaticon-map, "minus");
+}
+.flaticon-close:before {
+    content: map-get($flaticon-map, "close");
+}
+.flaticon-information:before {
+    content: map-get($flaticon-map, "information");
+}
+.flaticon-info:before {
+    content: map-get($flaticon-map, "info");
+}
+.flaticon-down-arrow:before {
+    content: map-get($flaticon-map, "down-arrow");
+}
+.flaticon-pin:before {
+    content: map-get($flaticon-map, "pin");
+}
+.flaticon-more:before {
+    content: map-get($flaticon-map, "more");
+}
+.flaticon-more-1:before {
+    content: map-get($flaticon-map, "more-1");
+}
+.flaticon-share:before {
+    content: map-get($flaticon-map, "share");
+}
+.flaticon-share-1:before {
+    content: map-get($flaticon-map, "share-1");
+}
+.flaticon-menu:before {
+    content: map-get($flaticon-map, "menu");
+}
+.flaticon-x-mark:before {
+    content: map-get($flaticon-map, "x-mark");
+}
+.flaticon-garbage:before {
+    content: map-get($flaticon-map, "garbage");
+}
