@@ -4,6 +4,7 @@ module.exports = {
         require('tailwindcss'),
         require('postcss-preset-env')({ stage: 1 }),
         require('postcss-font-magician')({
+            display: 'swap',
             variants: {
                 'Roboto Condensed': {
                     300: [],

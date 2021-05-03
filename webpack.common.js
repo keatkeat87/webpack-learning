@@ -65,17 +65,8 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(svg|gif)$/i,
+                test: /\.(svg|gif|jpe?g|png|webp)$/i,
                 type: 'asset/resource'
-            },
-            {
-                test: /\.(jpe?g|png|webp)$/i,
-                use: {
-                    loader: 'responsive-loader',
-                    options: {
-                        adapter: require('responsive-loader/sharp')
-                    }
-                }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
