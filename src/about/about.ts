@@ -1,5 +1,9 @@
 import './about.css';
-import { value, html } from '../shared/index';
+import * as $ from 'jquery';
 
-console.log('contact page', value);
-html('#target', 'about page');
+import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
+import 'swiper/swiper-bundle.css';
+SwiperCore.use([Navigation, Pagination]);
+console.log([$, Swiper]);
+
+console.log('about page');

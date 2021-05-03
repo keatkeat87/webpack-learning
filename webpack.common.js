@@ -60,5 +60,23 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.js']
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                swiper: {
+                    test: /[\\/]node_modules[\\/]swiper[\\/]/,
+                    name: 'swiper',
+                    chunks: chunk => chunk.name !== 'home' && chunk.name !== 'landing-page',
+                    priority: 1
+                },
+                jquery: {
+                    test: /[\\/]node_modules[\\/]jquery[\\/]/,
+                    name: 'jquery',
+                    chunks: chunk => chunk.name !== 'home' && chunk.name !== 'landing-page',
+                    priority: 1
+                }
+            }
+        }
     }
 };

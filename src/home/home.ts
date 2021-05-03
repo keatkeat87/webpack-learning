@@ -1,13 +1,54 @@
 import './home.scss';
-import { value, html } from '../shared/index';
+import * as $ from 'jquery';
+
+import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
+import 'swiper/swiper-bundle.css';
+SwiperCore.use([Navigation, Pagination]);
+console.log([$, Swiper]);
+// const swiper = new Swiper('.swiper-container', {
+//     direction: 'vertical',
+//     loop: true,
+
+//     pagination: {
+//         el: '.swiper-pagination'
+//     },
+
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev'
+//     },
+
+//     scrollbar: {
+//         el: '.swiper-scrollbar'
+//     }
+// });
+// console.log(swiper);
+
+
+// console.log('contact page', value);
+// html('#target', 'home page');
+
+// if (process.env.NODE_ENV !== 'production') {
+//     console.log('Looks like we are in development mode!');
+// }
+
+
+
+console.log('home page');
+
+
+
+
+
+
+
+
+/* Swiper
 
 import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
 import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, Pagination]);
-
-console.log('contact page', value);
-html('#target', 'home page');
 
 const swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
@@ -27,6 +68,8 @@ const swiper = new Swiper('.swiper-container', {
     }
 });
 console.log(swiper);
+*/
+
 
 
 
