@@ -4,7 +4,6 @@ const common = require('./webpack.common.js');
 const webpack = require('webpack');
 
 module.exports = merge(common, {
-    mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
         openPage: 'home.html',
@@ -20,7 +19,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': 'development'
+            // 'process.env.NODE_ENV': 'development'
         })
     ]
 });

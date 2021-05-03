@@ -6,6 +6,12 @@ import 'swiper/swiper-bundle.css';
 SwiperCore.use([Navigation, Pagination, Zoom]);
 
 console.log([$, Swiper, value]);
+
+
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+}
+
 // const swiper = new Swiper('.swiper-container', {
 //     direction: 'vertical',
 //     loop: true,
@@ -29,9 +35,6 @@ console.log([$, Swiper, value]);
 // console.log('contact page', value);
 // html('#target', 'home page');
 
-// if (process.env.NODE_ENV !== 'production') {
-//     console.log('Looks like we are in development mode!');
-// }
 
 
 

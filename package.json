@@ -2,8 +2,8 @@
   "name": "webpack",
   "version": "1.0.0",
   "scripts": {
-    "start": "set NODE_ENV=development&webpack serve --config webpack.dev.js",
-    "build": "set NODE_ENV=production& webpack --config webpack.prod.js"
+    "start": "set NODE_ENV=development& webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js --node-env production"
   },
   "main": "index.js",
   "author": "derrick",
