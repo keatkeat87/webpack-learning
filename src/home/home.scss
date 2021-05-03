@@ -1,16 +1,3 @@
-
-.dada {
-    display: flex;
-    flex-direction: column;
-    background-color: red;
-    width: 200px;
-    height: 200px;
-
-    &:hover {
-        background-color: blue;
-    }
-}
-
 body {
     font-family: "Alice";
 }
@@ -18,6 +5,9 @@ body {
 
 // swiper 
 .swiper-container {
-    width: 600px;
-    height: 300px;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
 }

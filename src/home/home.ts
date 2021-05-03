@@ -1,9 +1,10 @@
 import './home.scss';
 import * as $ from 'jquery';
 
-import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
+import SwiperCore, { Navigation, Pagination, Swiper, Zoom } from 'swiper/core';
 import 'swiper/swiper-bundle.css';
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination, Zoom]);
+
 console.log([$, Swiper]);
 // const swiper = new Swiper('.swiper-container', {
 //     direction: 'vertical',
@@ -43,6 +44,8 @@ console.log('home page');
 
 
 
+
+
 /* Swiper
 
 import SwiperCore, { Navigation, Pagination, Swiper } from 'swiper/core';
@@ -51,21 +54,23 @@ import 'swiper/swiper-bundle.css';
 SwiperCore.use([Navigation, Pagination]);
 
 const swiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
-    loop: true,
+    // direction: 'vertical',
+    // loop: true,
+    zoom: true,
 
     pagination: {
-        el: '.swiper-pagination'
+        el: '.swiper-pagination',
+        clickable: true
     },
 
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
-    },
-
-    scrollbar: {
-        el: '.swiper-scrollbar'
     }
+
+    // scrollbar: {
+    //     el: '.swiper-scrollbar'
+    // }
 });
 console.log(swiper);
 */
