@@ -3,7 +3,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const isProduction = process.env.NODE_ENV === 'production';
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -20,6 +22,14 @@ module.exports = {
         new ESLintPlugin({
             extensions: ['js', 'ts']
         }),
+        ...(
+            isProduction
+                ? [new MiniCssExtractPlugin({
+                    filename: '[name].[contenthash].css',
+                    chunkFilename: '[id].[contenthash].css'
+                })]
+                : []
+        ),
         new HtmlWebpackPlugin({
             title: 'home',
             filename: 'home.html',
@@ -48,7 +58,10 @@ module.exports = {
             },
             {
                 test: /\.(scss|css)$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+                use: [
+                    isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+                    'css-loader', 'postcss-loader', 'sass-loader'
+                ]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -75,7 +88,8 @@ module.exports = {
                     }
                 },
                 extractComments: false
-            })
+            }),
+            ...(isProduction ? [new CssMinimizerPlugin()] : [])
         ],
         splitChunks: {
             chunks: 'all',

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
+const webpack = require('webpack');
 
 module.exports = merge(common, {
     mode: 'development',
@@ -16,5 +17,10 @@ module.exports = merge(common, {
             cert: fs.readFileSync('C:\\self-signed-certificate\\192.168.1.152.crt')
         },
         hot: true
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': 'development'
+        })
+    ]
 });
