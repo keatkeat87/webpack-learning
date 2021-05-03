@@ -1,4 +1,9 @@
+
+
 import './home.scss';
+// import mainImage from '../assets/images/yangmi.jpg';
+// console.log('mainImage', mainImage);
+
 // import * as $ from 'jquery';
 // import { value } from '../shared/index';
 // import SwiperCore, { Navigation, Pagination, Swiper, Zoom } from 'swiper/core';
