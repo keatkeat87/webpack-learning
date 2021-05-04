@@ -1,12 +1,13 @@
 {
   "name": "webpack",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "set NODE_ENV=development& webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js --node-env production"
   },
   "main": "index.js",
-  "author": "derrick",
+  "author": "stooges",
   "license": "MIT",
   "devDependencies": {
     "@types/jquery": "^3.5.5",
