@@ -1,9 +1,14 @@
+// @use './dada';
 // @import "tailwindcss/base";
-// @import "tailwindcss/utilities";
+@import "tailwindcss/utilities";
 
-@import "../font/flaticon.css";
+// @import "../font/flaticon.css";
 
 // .btn {
 //     @apply text-gray-500
 // }
 
+.dada{
+    paddisng: dada;
+    dada: dada;
+}
