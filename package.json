@@ -1,14 +1,16 @@
 {
   "name": "webpack",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "start": "set NODE_ENV=development& webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js --node-env production"
   },
   "main": "index.js",
-  "author": "derrick",
+  "author": "stooges",
   "license": "MIT",
   "devDependencies": {
+    "@types/big.js": "^6.0.2",
     "@types/jquery": "^3.5.5",
     "@types/swiper": "^5.4.2",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -46,6 +48,7 @@
   "dependencies": {
     "flatpickr": "^4.6.9",
     "jquery": "^3.6.0",
+    "rxjs": "^7.0.0",
     "swiper": "^6.5.9"
   }
 }
