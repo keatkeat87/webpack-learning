@@ -1,6 +1,6 @@
-// @use './dada';
+@use './dada';
 // @import "tailwindcss/base";
-@import "tailwindcss/utilities";
+// @import "tailwindcss/utilities";
 
 // @import "../font/flaticon.css";
 
@@ -9,6 +9,5 @@
 // }
 
 .dada{
-    paddisng: dada;
-    dada: dada;
+    padding: 1px;
 }
