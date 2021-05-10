@@ -1,0 +1,13 @@
+@mixin dada {
+    color:red;
+}
+@mixin ellipsis($row, $lineHeight) {
+    -webkit-line-clamp: $row;
+    line-height: $lineHeight;
+    max-height: calc(#{$row} * #{$lineHeight}em);
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

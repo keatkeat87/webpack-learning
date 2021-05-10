@@ -1,5 +1,8 @@
-@import '../shared/component/component.scss';
+@use '../shared/component/component.scss';
 
+.wawa{
+    @include component.code;
+}
 // @import "tailwindcss/base";
 // @import "tailwindcss/utilities";
 

@@ -1,3 +1,8 @@
-.dada{
-    background-image: url('../../assets/images/yangmi.jpg');
+@use './component-b';
+
+@mixin code {
+    // @include component-b.dada;
+    @include component-b.ellipsis(1, 1);
+    padding: .25em;
+    line-height: 0;
 }
