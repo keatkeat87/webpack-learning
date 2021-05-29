@@ -1,15 +1,15 @@
-@use '../shared/component/component.scss';
+// @use '../shared/component/component.scss';
 
-.wawa{
-    @include component.code;
+// .wawa{
+//     @include component.code;
+// }
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+
+.btn {
+  @apply text-gray-500;
 }
-// @import "tailwindcss/base";
-// @import "tailwindcss/utilities";
 
-// .btn {
-//     @apply text-gray-500
-// }
-
-// .dada{
-//     padding: 1px;
-// }
+.dada {
+  padding: 1px;
+}
