@@ -9,7 +9,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     entry: {
-        home: './src/home/home'
+        home: './src/home/home',
+        amp: './src/amp/amp'
         // about: './src/about/about',
         // contact: './src/contact/contact'
     },
@@ -36,6 +37,12 @@ module.exports = {
             filename: 'home.html',
             template: './src/home/home.html',
             chunks: ['home']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'amp',
+            filename: 'amp.html',
+            template: './src/amp/amp.html',
+            chunks: ['amp']
         })
         // new HtmlWebpackPlugin({
         //     title: 'about',

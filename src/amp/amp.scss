@@ -1,0 +1,10 @@
+h1 {
+  margin: 1rem;
+    color: yellow;
+}
+
+@media (max-width:400px) {
+  h1 {
+    color: red;
+  }
+}
